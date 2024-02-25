@@ -35,22 +35,15 @@ class Sales {
         System.out.println("Monthly combined sales Quarter 4 for both shops: " + quarter4);
         
         // Respective shops annual sales
-        // High Street Branch
         int annualHighStreet = 0;
+	int annualMall = 0;
         for(i = 0; i < highStreet.length; i++){
             for(j = 0; j < highStreet[i].length; j++){
                 annualHighStreet += highStreet[i][j];
+		annualMall += mall[i][j];
             }
         }
         System.out.println("High Street Branch annual total: " + annualHighStreet);
-        
-        // Mall Branch
-        int annualMall = 0;
-        for(i = 0; i < highStreet.length; i++){
-            for(j = 0; j < highStreet[i].length; j++){
-                    annualMall += mall[i][j];
-            }
-        }
         System.out.println("Mall Branch annual total: " + annualMall);
         
         // The grand total annual combined sales for the two shops

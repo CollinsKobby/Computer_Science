@@ -5,6 +5,7 @@ import java.util.Arrays;
 class OddNumbers{
     public static void main(String[]args){
         Scanner Odd = new Scanner(System.in);
+
         int oddNumbers[][] = new int[3][3];
         int i, j;
         System.out.println("Enter the first 9 0dd numbers");

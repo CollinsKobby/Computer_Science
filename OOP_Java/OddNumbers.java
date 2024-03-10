@@ -20,9 +20,9 @@ class OddNumbers{
         for(i = 0; i < oddNumbers.length; i++){
             for(j = 0; j < oddNumbers[i].length; j++){
                 if(i == j){
-                    leading += oddNumbers[i][j];
+                    leading *= oddNumbers[i][j];
                 }
-                trailing = oddNumbers[0][2] + oddNumbers[1][1] + oddNumbers[2][0];
+                trailing = oddNumbers[0][2] * oddNumbers[1][1] * oddNumbers[2][0];
             }
         }
         int diff = trailing - leading;
@@ -39,8 +39,7 @@ class OddNumbers{
                 sum += oddNumbers[i][j];
             }
         }
-        int n = 9; // since oddNumbers is a 3*3 2d array it contains 9 values
-        int average = sum/n;
+        int average = sum/oddNumbers.length;
         // Assigning average to second row first column
         oddNumbers[1][0] = average;
         // Standard deviation
@@ -50,11 +49,17 @@ class OddNumbers{
                 sigmaSquared += Math.pow(oddNumbers[i][j] - average, 2);
             }
         }
-        double standardDeviation = Math.sqrt(sigmaSquared/n);
+        double standardDeviation = Math.sqrt(sigmaSquared/oddNumbers.length);
         //Assigning standard deviation to second row third column
         oddNumbers[1][2] = (int) standardDeviation; // type casting standardDeviation into int
         
         // sorting the new 2d 3*3 array in descending order
+        //Output for now
+        for(i = 0; i < oddNumbers.length; i++){
+            for(j = 0; j < oddNumbers[i].length; j++){
+                System.out.println(oddNumbers[i][j]);
+            }
+        }
        
     }
 }
